@@ -6,18 +6,16 @@ var burger = {
         cb(res);
       });
     },
-    // The variables cols and vals are arrays.
     insertOne: function(burgerName, cb) {
       orm.insertOne("burgers", burgerName, function(res) {
         cb(res);
       });
     },
-    updateOne: function(x, cb) {
-      orm.updateOne("burgers", function(res) {
+    updateOne: function(burgerName, devoured, cb) {
+      orm.updateOne("burgers", burgerName, devoured, function(res) {
         cb(res);
       });
     }
   };
   
-  // Export the database functions for the controller (catsController.js).
-  module.exports = cat;
+  module.exports = burger;
