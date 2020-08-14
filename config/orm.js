@@ -19,8 +19,8 @@ var orm = {
           }); 
     },
     
-    updateOne: function(table, name, val, cb) { 
-        connection.query("UPDATE ? SET devoured = ? WHERE burger_name = ?", [table, val, name], function (err, result) {
+    updateOne: function(table, val, id, cb) { 
+        connection.query("UPDATE " + table + " SET devoured = " + val + " WHERE id = " + id + "", [table, val, id], function (err, result) {
             if (err) {
                 throw err;
               }
@@ -28,6 +28,5 @@ var orm = {
         });
     }
 }
-
 
 module.exports = orm;

@@ -1,32 +1,49 @@
-<h1>Burgers!</h1>
+
+<div class="header-div">
+  <h1>Burgers MVC!</h1>
+  <p>With MySql, Express, & Handlebars</p>
+  <img src="/img/burger.png" />
+</div>
 
 
-<h2>Burger List</h2>
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-        <li>{{burger_name}} <button class="devour-button" id="burger{{id}}">Devour!</button></li>
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="form-div">
+ 
+  <h2>Create a new burger</h2>
+  <form class="burger-form">
 
-<h2>Devoured Burgers</h2>
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-        <li>{{burger_name}}</li>
-    {{/if}}
-  {{/each}}
-</ul>
+    <div class="form-group">
+      <label for="burger-input">New Burger</label>
+      <input type="text" id="burger-input" name="name">
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form> 
+  
+</div>
 
 
-<h2>Create a new burger</h2>
-<form class="burger-form">
-
-  <div class="form-group">
-    <label for="burger-input">New Burger</label>
-    <input type="text" id="burger-input" name="name">
+<div class="flex-div">
+  <div class="flex-col-1">
+    
+    <h2>Burger List</h2>
+    <ul>
+      {{#each burgers}}
+        {{#unless devoured}}
+            <li>{{burger_name}} <button class="devour-button" id="{{id}}">Devour!</button></li>
+        {{/unless}}
+      {{/each}}
+    </ul>
   </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+  
+  <div class="flex-col-2">
+    <h2>Devoured Burgers</h2>
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+            <li>{{burger_name}}</li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+  
+</div>
