@@ -12,7 +12,7 @@ Matt Wieciech
 ​![Product Logo](./public/img/mvc-app-ss.png) 
 
 ## Description
-A full stack application that allows a user to create an item, in this case a burger, which is added to a list on the front end via express handlebars, then also added to a mysql database. The used than can choose to devour the burger, which will transfer the burger to the devoured list, and also update its status in the database. Built with an MVC design.  
+A full stack application that allows a user to create an item, in this case a burger, which is added to a list on the front end via express handlebars, then also added to a mysql database. The user than can choose to devour the burger, which will transfer the burger to the devoured list, and also update its status in the database. Built with an MVC design.  
 
 ## Table of Contents
 * [Installation](#installation)
